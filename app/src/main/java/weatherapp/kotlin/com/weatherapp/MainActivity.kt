@@ -9,13 +9,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val name = "Ted"
-        val age = "21"
+        showGreeting("hello there!")
+        val answer = sum(1,5)
+        println("answer: $answer")
+    }
 
-        val greeting = "Hi, my name is $name, and I'm $age old"
-
-
-
-        currentTemp.text = greeting
+    fun sum(num1: Int, num2: Int): Int{
+      return num1 + num2
+    }
+    fun showGreeting(text: String){
+       println(text)
     }
 }
