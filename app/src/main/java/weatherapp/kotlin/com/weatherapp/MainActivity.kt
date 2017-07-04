@@ -10,7 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val name = "Ted"
-        currentTemp.text = "Hi there"
-        val currentTempTxt: String = currentTemp.text.toString()
+        val age = "21"
+
+        val greeting = "Hi, my name is $name, and I'm $age old"
+
+
+
+        currentTemp.text = greeting
     }
 }
