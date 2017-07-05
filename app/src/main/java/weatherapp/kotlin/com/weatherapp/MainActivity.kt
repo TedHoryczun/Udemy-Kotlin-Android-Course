@@ -5,6 +5,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    val DEGREE: String = "°"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,9 +22,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun  presentData(main: Main) {
-        currentTemp.text = main.temp.toString()
-        lowTemp.text = main.minTemp.toString()
-        highTemp.text = main.maxTemp.toString()
+        currentTemp.text = "${main.temp}$DEGREE"
+        lowTemp.text = "${main.minTemp}$DEGREE"
+        highTemp.text = "${main.maxTemp}$DEGREE"
 
     }
 }
